@@ -1,10 +1,11 @@
 import tkinter as tk
 import random
 import string
+import pyperclip
 
 
 class PasswordGenerator:
-    def _init_(self, master):
+    def __init__(self, master):
         self.master = master
         master.title("Advanced Password Generator")
 
@@ -86,6 +87,7 @@ class PasswordGenerator:
     def copy_to_clipboard(self):
         password = self.password_entry.get()
         pyperclip.copy(password)
+
 
 root = tk.Tk()
 my_gui = PasswordGenerator(root)
